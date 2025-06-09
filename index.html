@@ -1,287 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Karthik Raja T - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karthik Raja | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg-color: #f8f8f5;
-      --text-color: #2b2b2b;
-      --accent: #6b8e23;
-      --accent-dark: #556b2f;
-      --white: #ffffff;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
     }
 
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
       scroll-behavior: smooth;
     }
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: var(--white);
-      border-bottom: 1px solid #ddd;
-      position: sticky;
-      top: 0;
-      z-index: 999;
+      text-align: center;
+      padding: 4rem 1rem;
+      animation: fadeInDown 1s ease;
     }
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: var(--accent);
+    header h1 {
+      font-size: 3rem;
+      color: #00e0ff;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.2rem;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav a {
-      color: var(--text-color);
-      text-decoration: none;
-      font-weight: 600;
-      padding: 0.3rem 0.7rem;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
-
-    nav a:hover,
-    nav a.active {
-      background: rgba(107, 142, 35, 0.15);
+    header p {
+      font-size: 1.1rem;
+      color: #d0f0ff;
+      max-width: 700px;
+      margin: 1rem auto;
     }
 
     section {
-      max-width: 1000px;
-      margin: 4rem auto;
-      padding: 0 1.5rem;
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+      animation: fadeInUp 1s ease;
     }
 
-    #home {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    #home img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 3px solid var(--accent);
-      margin-bottom: 1rem;
-    }
-
-    h1 span {
-      color: var(--accent);
-    }
-
-    #typing-text {
-      font-weight: 600;
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-      color: var(--accent);
-      min-height: 1.5rem;
-    }
-
-    .buttons {
-      margin-top: 2rem;
-    }
-
-    .buttons a {
-      text-decoration: none;
-      padding: 0.7rem 1.5rem;
-      background: var(--accent);
-      color: var(--white);
-      border-radius: 30px;
-      font-weight: bold;
-      margin: 0.5rem;
-      transition: background 0.3s ease, transform 0.3s;
-      display: inline-block;
-    }
-
-    .buttons a:hover {
-      background: var(--accent-dark);
-      transform: scale(1.05);
-    }
-
-    .section-title {
+    h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
-      text-align: center;
-      color: var(--accent-dark);
+      color: #7afcff;
     }
 
-    .section-content {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      text-align: center;
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
     }
 
-    .contact-box {
-      background: var(--white);
-      padding: 1.5rem 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      max-width: 600px;
-      margin: auto;
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease-in-out;
+      backdrop-filter: blur(5px);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .card h3 {
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .card p, a {
+      color: #d0f0ff;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 0.5rem;
+      color: #00e0ff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact a:hover {
+      color: #ff90e8;
     }
 
     footer {
       text-align: center;
-      padding: 2rem 1rem;
-      background: #f1f1ed;
-      margin-top: 4rem;
+      padding: 2rem;
+      background: #0f2027;
+      color: #ccc;
     }
 
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: 600;
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    @media (min-width: 768px) {
-      #home {
-        flex-direction: row;
-        text-align: left;
-        gap: 2rem;
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
       }
-
-      #home .text {
-        flex: 1;
-      }
-
-      #home img {
-        margin: 0;
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
-    <div class="logo">Karthik Raja</div>
-    <nav>
-      <ul>
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>Karthik Raja</h1>
+    <p>I'm a passionate engineer skilled in Java, DevOps, C, DBMS, Data Structures & Algorithms, and MERN Stack. I love building real-world solutions and continuously learning to stay up-to-date.</p>
   </header>
 
-  <section id="home">
-    <img src="https://i.ibb.co/2d1gmsP/avatar.png" alt="Profile Photo" />
-    <div class="text">
-      <h1>Hello, I'm <span>Karthik Raja T</span></h1>
-      <div id="typing-text"></div>
-      <p style="margin-top: 1rem;">
-        I'm a passionate engineer skilled in Java, DevOps, C, DBMS, Data Structures & Algorithms, and MERN Stack.
-        I love building real-world solutions and continuously learning to stay up-to-date.
-      </p>
-      <div class="buttons">
-        <a href="#about">About Me</a>
-        <a href="mailto:tkarthikraja2004@gmail.com">Email Me</a>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m currently a 3rd-year Computer Science Engineering student at Bannari Amman Institute of Technology. I enjoy working on both backend and frontend logic and strive to write clean and maintainable code. Currently building "Peer Notes" using full stack technologies.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card">
+        <h3>Languages</h3>
+        <p>Java, C</p>
+      </div>
+      <div class="card">
+        <h3>DevOps Tools</h3>
+        <p>Docker, Git, CI/CD</p>
+      </div>
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>MERN Stack (MongoDB, Express, React, Node.js)</p>
+      </div>
+      <div class="card">
+        <h3>Database</h3>
+        <p>MySQL, MongoDB</p>
+      </div>
+      <div class="card">
+        <h3>Core Subjects</h3>
+        <p>DBMS, Data Structures & Algorithms</p>
       </div>
     </div>
   </section>
 
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <p class="section-content">
-      I'm a 3rd-year Computer Science Engineering student at Bannari Amman Institute of Technology.
-      <br><br>
-      I specialize in:
-      <strong>Java, C, DevOps Tools, DBMS, Data Structures & Algorithms, and the MERN Stack</strong>.
-      <br><br>
-      I enjoy working on both backend and frontend logic and strive to write clean and maintainable code.
-    </p>
-  </section>
-
   <section id="projects">
-    <h2 class="section-title">Projects</h2>
-    <div class="section-content">
-      <ul style="text-align: left; max-width: 700px; margin: auto; padding-left: 1rem;">
-        <li>
-          <strong>Task Manager App</strong> – A web app to manage tasks using HTML, CSS, and JavaScript.
-        </li>
-        <li>
-          <strong>Student Result System</strong> – Java-based tool to handle and view student performance.
-        </li>
-        <li>
-          <strong>DevOps Dashboard</strong> – A basic CI/CD pipeline monitor built with Docker & Jenkins.
-        </li>
-      </ul>
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Peer Notes</h3>
+        <p>A full stack note sharing web app for students to upload, browse, and search academic notes.</p>
+        <a href="#">🔗 View Project</a>
+      </div>
+      <div class="card">
+        <h3>More Projects Coming</h3>
+        <p>Stay tuned for more real-world apps I’m building using my skills.</p>
+      </div>
     </div>
   </section>
 
   <section id="contact">
-    <h2 class="section-title">Contact Me</h2>
-    <div class="contact-box">
-      <p>Feel free to reach out to me via email:</p>
-      <p><strong>tkarthikraja2004@gmail.com</strong></p>
-      <p>Looking forward to connecting!</p>
+    <h2>Contact Me</h2>
+    <div class="contact">
+      <a href="mailto:karthik@example.com"><i class="fas fa-envelope"></i> karthik@example.com</a>
+      <a href="https://github.com/karthikraja"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/in/karthikraja"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://leetcode.com/karthikraja"><i class="fas fa-code"></i> LeetCode</a>
     </div>
   </section>
 
   <footer>
-    <p>📫 Connect with me:</p>
-    <p>
-      <a href="https://linkedin.com/in/karthikraja" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/karthikraja" target="_blank">GitHub</a>
-    </p>
-    <p style="margin-top: 1rem; color: #777;">&copy; 2025 Karthik Raja T</p>
+    &copy; 2025 Karthik Raja. All rights reserved.
   </footer>
 
   <script>
-    const typingText = document.getElementById("typing-text");
-    const roles = [
-      "Java Developer",
-      "DevOps Enthusiast",
-      "MERN Stack Learner",
-      "DSA Problem Solver",
-      "Engineer @ BIT"
-    ];
-    let index = 0;
-    let charIndex = 0;
-
-    function type() {
-      if (charIndex < roles[index].length) {
-        typingText.textContent += roles[index].charAt(charIndex);
-        charIndex++;
-        setTimeout(type, 90);
-      } else {
-        setTimeout(erase, 1800);
-      }
-    }
-
-    function erase() {
-      if (charIndex > 0) {
-        typingText.textContent = roles[index].substring(0, charIndex - 1);
-        charIndex--;
-        setTimeout(erase, 40);
-      } else {
-        index = (index + 1) % roles.length;
-        setTimeout(type, 700);
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      type();
+    // Add dynamic effects (e.g. nav highlight on scroll)
+    window.addEventListener('scroll', () => {
+      document.body.style.backgroundPositionY = `${window.scrollY * 0.2}px`;
     });
   </script>
-
 </body>
+
 </html>
