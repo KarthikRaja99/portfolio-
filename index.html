@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Karthik Raja T - Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #f8f8f5;
+      --text-color: #2b2b2b;
+      --accent: #6b8e23;
+      --accent-dark: #556b2f;
+      --white: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--white);
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--accent);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: rgba(107, 142, 35, 0.15);
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+    }
+
+    #home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    #home img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    #typing-text {
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: var(--accent);
+      min-height: 1.5rem;
+    }
+
+    .buttons {
+      margin-top: 2rem;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      padding: 0.7rem 1.5rem;
+      background: var(--accent);
+      color: var(--white);
+      border-radius: 30px;
+      font-weight: bold;
+      margin: 0.5rem;
+      transition: background 0.3s ease, transform 0.3s;
+      display: inline-block;
+    }
+
+    .buttons a:hover {
+      background: var(--accent-dark);
+      transform: scale(1.05);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: var(--accent-dark);
+    }
+
+    .section-content {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .contact-box {
+      background: var(--white);
+      padding: 1.5rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #f1f1ed;
+      margin-top: 4rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 600;
+    }
+
+    @media (min-width: 768px) {
+      #home {
+        flex-direction: row;
+        text-align: left;
+        gap: 2rem;
+      }
+
+      #home .text {
+        flex: 1;
+      }
+
+      #home img {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Karthik Raja</div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <img src="https://i.ibb.co/2d1gmsP/avatar.png" alt="Profile Photo" />
+    <div class="text">
+      <h1>Hello, I'm <span>Karthik Raja T</span></h1>
+      <div id="typing-text"></div>
+      <p style="margin-top: 1rem;">
+        I'm a passionate engineer skilled in Java, DevOps, C, DBMS, Data Structures & Algorithms, and MERN Stack.
+        I love building real-world solutions and continuously learning to stay up-to-date.
+      </p>
+      <div class="buttons">
+        <a href="#about">About Me</a>
+        <a href="mailto:tkarthikraja2004@gmail.com">Email Me</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-content">
+      I'm a 3rd-year Computer Science Engineering student at Bannari Amman Institute of Technology.
+      <br><br>
+      I specialize in:
+      <strong>Java, C, DevOps Tools, DBMS, Data Structures & Algorithms, and the MERN Stack</strong>.
+      <br><br>
+      I enjoy working on both backend and frontend logic and strive to write clean and maintainable code.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="section-content">
+      <ul style="text-align: left; max-width: 700px; margin: auto; padding-left: 1rem;">
+        <li>
+          <strong>Task Manager App</strong> – A web app to manage tasks using HTML, CSS, and JavaScript.
+        </li>
+        <li>
+          <strong>Student Result System</strong> – Java-based tool to handle and view student performance.
+        </li>
+        <li>
+          <strong>DevOps Dashboard</strong> – A basic CI/CD pipeline monitor built with Docker & Jenkins.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact-box">
+      <p>Feel free to reach out to me via email:</p>
+      <p><strong>tkarthikraja2004@gmail.com</strong></p>
+      <p>Looking forward to connecting!</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>📫 Connect with me:</p>
+    <p>
+      <a href="https://linkedin.com/in/karthikraja" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/karthikraja" target="_blank">GitHub</a>
+    </p>
+    <p style="margin-top: 1rem; color: #777;">&copy; 2025 Karthik Raja T</p>
+  </footer>
+
+  <script>
+    const typingText = document.getElementById("typing-text");
+    const roles = [
+      "Java Developer",
+      "DevOps Enthusiast",
+      "MERN Stack Learner",
+      "DSA Problem Solver",
+      "Engineer @ BIT"
+    ];
+    let index = 0;
+    let charIndex = 0;
+
+    function type() {
+      if (charIndex < roles[index].length) {
+        typingText.textContent += roles[index].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 90);
+      } else {
+        setTimeout(erase, 1800);
+      }
+    }
+
+    function erase() {
+      if (charIndex > 0) {
+        typingText.textContent = roles[index].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, 40);
+      } else {
+        index = (index + 1) % roles.length;
+        setTimeout(type, 700);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      type();
+    });
+  </script>
+
+</body>
+</html>
